@@ -1,0 +1,23 @@
+[package]
+name = "captcha"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ['cdylib']
+
+[dependencies]
+image = { version = '0.23.14', default_features = false }
+imageproc = { version = '0.22.0', default_features = false }
+fontdue = { version = '0.8.0', default-features = false }
+png = "0.17.2"
+zerocopy = { version = "0.7.32" }
+
+[profile.release]
+lto = 'fat'
+debug = false
+opt-level = 3
+panic = 'abort'
+strip = 'symbols'
+codegen-units = 1
+overflow-checks = false

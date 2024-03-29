@@ -1,0 +1,12 @@
+dev/
+test*.*
+!test.js
+target/
+.DS_Store
+src/*/asm.js
+node_modules/
+package-lock.json
+archive
+.vscode
+dist
+coverage
